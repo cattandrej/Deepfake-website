@@ -5,7 +5,8 @@ var wheelEventTime = Date.now();
 
 var sections = ["first",
     "second",
-    "third"];
+    "third",
+    "forth"];
 var currentSection = 0;
 
 function scroll_to(id) {
@@ -15,7 +16,7 @@ function scroll_to(id) {
 }
 
 window.addEventListener("wheel", event => {
-    
+
     if (Date.now() - wheelEventTime > 500) {
         delta = Math.sign(event.deltaY);
         console.log(event.deltaY    );
@@ -43,9 +44,11 @@ var amount = 2000;
 var dir = 1;
 
 $(document).ready(function() { 
-    $(".button").click(function() { 
-        //$("div").scrollLeft(2000 * dir);  
-        body.stop().animate({scrollLeft: (amount * dir)}, 500, 'swing', function() { 
+    $(".button").click(function(event) { 
+        var id = event.target.id;
+        
+        console.log(id);
+        $("#" + id).stop().animate({scrollLeft: (amount * dir)}, 500, 'swing', function() { 
          });
         dir *= (-1);
     }); 
