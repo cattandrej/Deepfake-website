@@ -1,0 +1,41 @@
+h1 {
+  font-size: 200px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-align: left;
+}
+
+
+.white {
+  color: #ffffff;
+}
+
+.orange {
+  color: #f0801a;
+}
+
+.outline {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: #f0801a;  
+  -webkit-text-stroke-width: 2px;
+}
+
+.video-title {
+    font-size: 36px;
+    font-family: 'Playfair', serif;
+    font-weight: 700;
+    text-align: left;
+}
+
+.video-desc {
+    font-size: 20px;
+    font-family: 'Raleway', serif;
+    font-weight: 400;
+    text-align: left;
+}
+
+.number {
+    font-size: 150px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}

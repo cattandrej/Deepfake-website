@@ -47,7 +47,7 @@ body, div, h1, p {
 .img-adapt {
     background-size:     cover;                      /* <------ */
     background-repeat:   no-repeat;
-    background-position: center center;     
+    background-position: center center;
     height: 100px;
 }
 
@@ -60,7 +60,7 @@ body, div, h1, p {
     overflow: hidden;
 }
 
-.scale-2 
+.scale-2
 {
 transform: scale(2);
 }
@@ -121,10 +121,6 @@ transform: scale(2);
     width: 150vw;
 }
 
-h1 {
-    font-size: 250px;
-}
-
 .red {
     background-color: red;
 }
@@ -140,7 +136,7 @@ h1 {
 .button {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     background-color: indianred;
     color: white;
     text-align: center;
@@ -154,9 +150,7 @@ h1 {
 }
 
 .number {
-    width: 300px;
-    /*text-align: center;*/
-    font-size: 100px;
+    width: 300px;    
     line-height: 300px;
     background-color: turquoise;
 }
@@ -168,5 +162,5 @@ video {
 .video-row {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
