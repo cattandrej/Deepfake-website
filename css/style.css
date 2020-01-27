@@ -31,6 +31,7 @@ body, div, h1, p {
 }
 
 .video-desc {
+    padding-top: 2vh;
     font-size: 30px;
 }
 
@@ -163,4 +164,8 @@ video {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.video-imgs {
+  padding-top: 7vh;
 }
