@@ -20,6 +20,20 @@ body, div, h1, p {
     background-color: teal;
 }
 
+.video-player-container {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    background-color: skyblue;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+  
+}
+.video-player {
+    height: 100%;
+    width: 35vw;
+    background-color: slateblue;
+}
+
 .video-title {
     font-size: 50px;
 }
@@ -116,13 +130,15 @@ h1 {
 }
 
 .button {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
     background-color: indianred;
     color: white;
-    font-size: 40pt;
-    margin: 120px;
-    padding: 50px;
     text-align: center;
-    max-width: 100vh;
+    max-width: 5vw;
+    min-height: 15vw;
+    max-height: 25vh;
 }
 
 .number {
@@ -131,4 +147,14 @@ h1 {
     font-size: 100px;
     line-height: 300px;
     background-color: turquoise;
+}
+
+video {
+    max-width: 100%;
+}
+
+.video-row {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
 }
