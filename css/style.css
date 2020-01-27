@@ -20,14 +20,6 @@ body, div, h1, p {
     background-color: teal;
 }
 
-.video-player-container {
-    padding-left: 5vw;
-    padding-right: 5vw;
-    background-color: skyblue;
-    margin-top: 5vw;
-    margin-bottom: 5vw;
-  
-}
 .video-player {
     height: 100%;
     width: 35vw;
@@ -53,11 +45,27 @@ body, div, h1, p {
 }
 
 .img-adapt {
-    min-width: 100%;
-    min-height: 100%;
-    max-width: 100%;
-    max-height: auto;
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;     
+    height: 100px;
 }
+
+.video-player-container {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    background-color: skyblue;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    overflow: hidden;
+}
+
+.scale-2 
+{
+transform: scale(2);
+}
+
+
 
 .img-container  {
     overflow: hidden;
@@ -139,6 +147,10 @@ h1 {
     max-width: 5vw;
     min-height: 15vw;
     max-height: 25vh;
+}
+
+.button:hover {
+    background-color: red;
 }
 
 .number {
