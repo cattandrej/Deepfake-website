@@ -31,7 +31,7 @@ body, div, h1, p {
 }
 
 .video-desc {
-    padding-top: 2vh;
+    padding-top: 2.5vh;
     font-size: 30px;
 }
 
@@ -167,5 +167,5 @@ video {
 }
 
 .video-imgs {
-  padding-top: 7vh;
+  padding-top: 7.5vh;
 }
