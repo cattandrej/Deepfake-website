@@ -37,11 +37,16 @@ window.addEventListener("wheel", event => {
     wheelEventTime = Date.now();
 });
 
+var body = $("div");
+
+var amount = 2000;
 var dir = 1;
 
 $(document).ready(function() { 
     $(".button").click(function() { 
-        $("div").scrollLeft(2000 * dir);  
+        //$("div").scrollLeft(2000 * dir);  
+        body.stop().animate({scrollLeft: (amount * dir)}, 500, 'swing', function() { 
+         });
         dir *= (-1);
     }); 
 }); 
