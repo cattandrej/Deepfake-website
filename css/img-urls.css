@@ -1,5 +1,9 @@
-.img-placeholder {
-    background-image: url(../res/img/placeholder.png);
+.img-placeholderelon1 {
+  background-image: url(../assets/Elon_original.gif);
+}
+
+.img-placeholderelon2 {
+background-image: url(../assets/Elon_deepfake.gif);
 }
 
 .video-placeholder {
