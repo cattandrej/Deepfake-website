@@ -1,5 +1,14 @@
+html, body {
+  font-size: 24px;
+}
+
+.bgblack {
+  background-color: black;
+}
+
+
 h1 {
-  font-size: 200px;
+  font-size: 10rem;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   text-align: left;
@@ -16,26 +25,26 @@ h1 {
 
 .outline {
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-color: #f0801a;  
+  -webkit-text-stroke-color: #f0801a;
   -webkit-text-stroke-width: 2px;
 }
 
 .video-title {
-    font-size: 36px;
+    font-size: 1.3rem;
     font-family: 'Playfair', serif;
     font-weight: 700;
     text-align: left;
 }
 
 .video-desc {
-    font-size: 20px;
+    font-size: 0.7rem;
     font-family: 'Raleway', serif;
     font-weight: 400;
     text-align: left;
 }
 
 .number {
-    font-size: 150px;
+    font-size: 7rem;
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
 }
