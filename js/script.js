@@ -1,5 +1,8 @@
 console.log("HELLO");
 
+var iconTypes = ["asdf",
+];
+
 var delta = 0;
 var wheelEventTime = Date.now();
 
@@ -54,15 +57,18 @@ $(document).ready(function () {
     });
 });
 
-$('.icon').mouseenter(function () {
+var id;
 
-    var id = event.target.id;
-    
-    $('#' + id).mouseenter(function () {
-        console.log($(".icon-desc#" + id).show());
-    }).mouseleave(function () {
-        
-    }).mouseleave(function () {
-        $(".icon-desc#" + id).hide();
-    });
+$('.icon').mouseenter(function () {
+    console.log("ICON ENTER");
+
+    id = event.target.id;
+
+    $(".icon-desc#" + id).css("height", "auto");
+    $(".icon-desc#" + id).css("padding", "1.25vw");
+    console.log("mouseenter ON " + id);
+}).mouseleave(function () {
+    $(".icon-desc#" + id).css("height", "0px");
+    $(".icon-desc#" + id).css("padding", "0px 1.25vw 0px 1.25vw");
+    console.log("mouseleave ON " + id);
 });

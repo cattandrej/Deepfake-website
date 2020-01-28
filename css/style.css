@@ -189,11 +189,12 @@ video {
 }
 
 .icon-desc {
-    padding: 1.25vw;
+
     color: white;
     font-size: .5rem;
     background-color: indianred;
-    height: auto;
+    height: 0px;
+    overflow: hidden;
 }
 
 .icon-desc#skin_color,
@@ -205,5 +206,7 @@ video {
 .icon-desc#perspective,
 .icon-desc#occlusion
 {
-    display: none;
+    padding: 0px 1.25vw 0px 1.25vw;
+    overflow: hidden;
+    transition: all .125s ease;
 }
