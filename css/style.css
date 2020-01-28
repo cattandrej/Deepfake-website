@@ -64,7 +64,7 @@ body, div, h1, p, img {
 }
 
 .scale-2 {
-    transform: scale(2);
+    transform: scale(1.45);
 }
 
 .img-container {
@@ -75,10 +75,12 @@ body, div, h1, p, img {
 }
 
 .col-video-desc {
+    white-space: normal;
     float: left;
     height: 100%;
     width: 35vw;
     background-color: slateblue;
+    overflow: hidden;
 }
 
 .col-video-player {
@@ -93,10 +95,13 @@ body, div, h1, p, img {
 }
 
 .video-main {
+
+    transition: all .125s linear;
     height: 100%;
     width: 90vw;
     display: inline-block;
     background-color: wheat;
+    overflow: hidden;
 }
 
 .video-info {
@@ -107,6 +112,7 @@ body, div, h1, p, img {
 }
 
 .content {
+    white-space: nowrap;
     height: 100%;
 }
 
@@ -131,15 +137,18 @@ body, div, h1, p, img {
 }
 
 .button {
+    font-size: 4vw;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: indianred;
     color: white;
     text-align: center;
-    max-width: 1vw;
-    min-height: 15vw;
-    max-height: 25vh;
+    width: 2vw;
+    height: 20vw;
+    border-radius: 0vw;
+    transform: translateX(-50%);
+    line-height: 0px;
 }
 
 .button:hover {

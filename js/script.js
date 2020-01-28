@@ -42,9 +42,20 @@ window.addEventListener("wheel", event => {
 });
 
 var body = $("div");
+var vw = $( window ).width() / 100;
+var amount = vw * 5;
 
-var amount = 2000;
+$(window).resize(function() {
+    var tmp = vw;
+    vw = $( window ).width() / 100;
+
+    amount = vw * (amount / tmp);
+});
+
+
 var dir = 1;
+
+var isHidden = false;
 
 $(document).ready(function () {
     $(".button").click(function (event) {
@@ -54,6 +65,18 @@ $(document).ready(function () {
         $("#" + id).stop().animate({ scrollLeft: (amount * dir) }, 500, 'swing', function () {
         });
         dir *= (-1);
+
+        console.log($(".video-main").css('width'));
+        if(!isHidden) {
+            $(".video-main").css("width","55vw");
+            $(".wide").css("width","115vw");  
+            isHidden = true;
+        } else {
+            $(".video-main").css("width","90vw");
+            $(".wide").css("width","150vw");
+            isHidden = false;
+        }
+
     });
 });
 
