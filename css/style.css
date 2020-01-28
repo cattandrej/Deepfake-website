@@ -74,14 +74,14 @@ body, div, h1, p, img {
     overflow-x: hidden;
 }
 
-.col-sx {
+.col-video-desc {
     float: left;
     height: 100%;
     width: 35vw;
     background-color: slateblue;
 }
 
-.col-dx {
+.col-video-player {
     display: inline-block;
     width: 55vw;
     background-color: yellowgreen;
@@ -137,7 +137,7 @@ body, div, h1, p, img {
     background-color: indianred;
     color: white;
     text-align: center;
-    max-width: 5vw;
+    max-width: 1vw;
     min-height: 15vw;
     max-height: 25vh;
 }
