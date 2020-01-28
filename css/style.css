@@ -1,4 +1,4 @@
-body, div, h1, p {
+body, div, h1, p, img {
     margin: 0px;
     padding: 0px;
 }
@@ -21,8 +21,11 @@ body, div, h1, p {
 }
 
 .video-player {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
     height: 100%;
-    width: 35vw;
+    width: 100%;
     background-color: slateblue;
 }
 
@@ -36,7 +39,7 @@ body, div, h1, p {
 }
 
 .img-container {
-    float: left;;
+    float: left;
 
 }
 
@@ -46,8 +49,8 @@ body, div, h1, p {
 }
 
 .img-adapt {
-    background-size:     cover;                      /* <------ */
-    background-repeat:   no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center center;
     height: 100px;
 }
@@ -56,9 +59,9 @@ body, div, h1, p {
     padding-left: 5vw;
     padding-right: 5vw;
     background-color: skyblue;
-    margin-top: 5vw;
-    margin-bottom: 5vw;
     overflow: hidden;
+    height: 30vw;
+    width: 100%;
 }
 
 .scale-2
@@ -151,8 +154,8 @@ transform: scale(2);
 }
 
 .number {
-    width: 300px;
-    line-height: 300px;
+    width: 16vw;
+    line-height: 16vw;
     background-color: turquoise;
 }
 
@@ -161,6 +164,9 @@ video {
 }
 
 .video-row {
+    padding-right: 2.5vw;
+    padding-left: 2.5vw;
+    margin-top: 5vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -168,4 +174,19 @@ video {
 
 .video-imgs {
   padding-top: 7.5vh;
+}
+
+.icons-row {
+    padding: 1.25vw 2.5vw 1.25vw 2.5vw;
+    height: auto;
+}
+
+.icon {
+    max-height: 3.33vw;
+    width: auto;
+    min-width: 5px;
+    max-width: 3.3vw;
+    padding:0px;
+    margin: 0px;
+
 }
