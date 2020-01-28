@@ -23,7 +23,7 @@ body, div, h1, p, img {
 .video-player {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     height: 100%;
     width: 100%;
     background-color: slateblue;
@@ -40,7 +40,6 @@ body, div, h1, p, img {
 
 .img-container {
     float: left;
-
 }
 
 .img-small {
@@ -64,21 +63,16 @@ body, div, h1, p, img {
     width: 100%;
 }
 
-.scale-2
-{
-transform: scale(2);
+.scale-2 {
+    transform: scale(2);
 }
 
-
-
-.img-container  {
+.img-container {
     overflow: hidden;
-
     vertical-align: middle;
-    text-align:center;
-    overflow-x:hidden;
+    text-align: center;
+    overflow-x: hidden;
 }
-
 
 .col-sx {
     float: left;
@@ -93,7 +87,6 @@ transform: scale(2);
     background-color: yellowgreen;
     height: 100%;
 }
-
 
 .left {
     float: left;
@@ -173,7 +166,7 @@ video {
 }
 
 .video-imgs {
-  padding-top: 7.5vh;
+    padding-top: 7.5vh;
 }
 
 .icons-row {
@@ -186,7 +179,31 @@ video {
     width: auto;
     min-width: 5px;
     max-width: 3.3vw;
-    padding:0px;
+    padding: 0px;
     margin: 0px;
+}
 
+.icon-desc-row {
+    padding-right: 7.5vw;
+    padding-left: 2.5vw;
+}
+
+.icon-desc {
+    padding: 1.25vw;
+    color: white;
+    font-size: .5rem;
+    background-color: indianred;
+    height: auto;
+}
+
+.icon-desc#skin_color,
+.icon-desc#edges,
+.icon-desc#expression,
+.icon-desc#blur,
+.icon-desc#profile,
+.icon-desc#flicker,
+.icon-desc#perspective,
+.icon-desc#occlusion
+{
+    display: none;
 }

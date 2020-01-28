@@ -19,7 +19,7 @@ window.addEventListener("wheel", event => {
 
     if (Date.now() - wheelEventTime > 500) {
         delta = Math.sign(event.deltaY);
-        console.log(event.deltaY    );
+        console.log(event.deltaY);
 
         if (delta > 0) {
             if (currentSection < sections.length - 1) {
@@ -43,13 +43,26 @@ var body = $("div");
 var amount = 2000;
 var dir = 1;
 
-$(document).ready(function() { 
-    $(".button").click(function(event) { 
+$(document).ready(function () {
+    $(".button").click(function (event) {
         var id = event.target.id;
-        
+
         console.log(id);
-        $("#" + id).stop().animate({scrollLeft: (amount * dir)}, 500, 'swing', function() { 
-         });
+        $("#" + id).stop().animate({ scrollLeft: (amount * dir) }, 500, 'swing', function () {
+        });
         dir *= (-1);
-    }); 
-}); 
+    });
+});
+
+$('.icon').mouseenter(function () {
+
+    var id = event.target.id;
+    
+    $('#' + id).mouseenter(function () {
+        console.log($(".icon-desc#" + id).show());
+    }).mouseleave(function () {
+        
+    }).mouseleave(function () {
+        $(".icon-desc#" + id).hide();
+    });
+});
