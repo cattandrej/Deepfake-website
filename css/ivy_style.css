@@ -30,13 +30,13 @@ h1 {
 }
 
 .video-title {
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     text-align: left;
 }
 
-.video-desc {
+.video-desc, .video-info {
     font-size: 0.7rem;
     font-family: 'Raleway', serif;
     font-weight: 400;
