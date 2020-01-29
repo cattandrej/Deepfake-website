@@ -1,15 +1,52 @@
 console.log("HELLO");
 
-var iconTypes = ["asdf",
+var sections = [
+    "first",
+    "second",
+    "third",
+    "forth",
+    "fifth"
 ];
 
+const _sections = [
+    "first",
+    "second",
+    "third",
+    "forth",
+    "fifth"
+];
+
+const _visible = "visible";
+const _hidden = "hidden";
+const _resizable = "resizable";
+const _fixed = "fixed";
+
+//
+// SECTIONS DECLARATION
+//
+class Section {
+    constructor(id, type, status) {
+        this.id = id;
+        this.type = type;
+        this.status = status;
+        this.dir = 1;
+    }
+}
+
+var sectionList = [
+    new Section(sections[0], _fixed, _visible),
+    new Section(sections[1], _fixed, _visible),
+    new Section(sections[2], _resizable, _visible),
+    new Section(sections[3], _fixed, _visible),
+    new Section(sections[4], _fixed, _visible)
+]
+
+//
+// LOCK SCROLLING TO PAGES
+//
 var delta = 0;
 var wheelEventTime = Date.now();
 
-var sections = ["first",
-    "second",
-    "third",
-    "forth"];
 var currentSection = 0;
 
 function scroll_to(id) {
@@ -41,6 +78,10 @@ window.addEventListener("wheel", event => {
     wheelEventTime = Date.now();
 });
 
+//
+// SCREEN RESIZING AND
+// VIEWPORT VW CALCULATION
+//
 var body = $("div");
 var vw = $( window ).width() / 100;
 var amount = vw * 5;
@@ -57,32 +98,86 @@ var dir = 1;
 
 var isHidden = false;
 
+//
+// SCROLLING AND RESIZING ANIMATION
+//
 $(document).ready(function () {
     $(".button").click(function (event) {
         var id = event.target.id;
 
+        //
+        // SCROLLING
+        //
         console.log(id);
-        $("#" + id).stop().animate({ scrollLeft: (amount * dir) }, 500, 'swing', function () {
-        });
-        dir *= (-1);
 
-        console.log($(".video-main").css('width'));
-        if(!isHidden) {
-            $(".video-main").css("width","55vw");
-            $(".wide").css("width","115vw");  
-            isHidden = true;
-        } else {
-            $(".video-main").css("width","90vw");
-            $(".wide").css("width","150vw");
-            isHidden = false;
+
+        //
+        // RESIZING
+        //
+        console.log($(".video-main#" + id).css('width'));
+
+
+        // SELECTING CURRENT SECTION
+        var i = 0;
+        while (sectionList[i].id != id) {
+            i++;
         }
+
+        if (sectionList[i].type === _fixed) {
+            console.log("I AM FIXED!");
+
+            $("#" + id).stop().animate({ scrollLeft: (7 * amount * sectionList[i].dir) }, 250, 'swing', function () {
+            });
+
+            sectionList[i].dir *= (-1);
+        } else {
+            console.log(sectionList[i]);
+            console.log("I AM RESIZABLE!");
+            if (sectionList[i].status === _visible) {
+
+                $(".video-main#" + id).css("width","55vw");
+                $(".wide#" + id).css("width","115vw");  
+                sectionList[i].status = _hidden;
+
+            } else {
+                $(".video-main#" + id).css("width","90vw");
+                $(".wide#" + id).css("width","150vw");
+                sectionList[i].status = _visible;
+            }
+        }
+
+        // if ((i >= 0) && (i < sections.length)) {
+        //     if (sectionStatus[i].toLowerCase() === _visible) {
+        //         $(".video-main#" + id).css("width","55vw");
+        //         $(".wide#" + id).css("width","115vw");
+        //         sectionStatus[i] = _hidden;
+        //     } else {
+        //         $(".video-main#" + id).css("width","90vw");
+        //         $(".wide#" + id).css("width","150vw");
+        //         sectionStatus[i] = _visible;
+        //     }
+        // }
+
+        // if(!isHidden) {
+        //     $(".video-main#" + id).css("width","55vw");
+        //     $(".wide#" + id).css("width","115vw");  
+        //     isHidden = true;
+        // } else {
+        //     $(".video-main#" + id).css("width","90vw");
+        //     $(".wide#" + id).css("width","150vw");
+        //     isHidden = false;
+        // }
 
     });
 });
 
+
+//
+// ICON DESCRIPTION ANIMATION
+//
 var id;
 
-$('.icon').mouseenter(function () {
+$('.icon').mouseenter(function (event) {
     console.log("ICON ENTER");
 
     id = event.target.id;

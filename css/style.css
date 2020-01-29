@@ -193,6 +193,7 @@ video {
 }
 
 .icon-desc-row {
+    white-space: normal;
     padding-right: 7.5vw;
     padding-left: 2.5vw;
 }
