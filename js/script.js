@@ -1,13 +1,5 @@
 console.log("HELLO");
 
-var sections = [
-    "first",
-    "second",
-    "third",
-    "forth",
-    "fifth"
-];
-
 const _sections = [
     "first",
     "second",
@@ -34,11 +26,11 @@ class Section {
 }
 
 var sectionList = [
-    new Section(sections[0], _fixed, _visible),
-    new Section(sections[1], _fixed, _visible),
-    new Section(sections[2], _resizable, _visible),
-    new Section(sections[3], _fixed, _visible),
-    new Section(sections[4], _fixed, _visible)
+    new Section(_sections[0], _fixed, _visible),
+    new Section(_sections[1], _fixed, _visible),
+    new Section(_sections[2], _resizable, _visible),
+    new Section(_sections[3], _fixed, _visible),
+    new Section(_sections[4], _fixed, _visible)
 ]
 
 //
@@ -62,7 +54,7 @@ window.addEventListener("wheel", event => {
         console.log(event.deltaY);
 
         if (delta > 0) {
-            if (currentSection < sections.length - 1) {
+            if (currentSection < _sections.length - 1) {
                 currentSection++;
             }
         }
@@ -73,7 +65,7 @@ window.addEventListener("wheel", event => {
             }
         }
 
-        scroll_to(sections[currentSection]);
+        scroll_to(_sections[currentSection]);
     }
     wheelEventTime = Date.now();
 });
@@ -145,29 +137,6 @@ $(document).ready(function () {
                 sectionList[i].status = _visible;
             }
         }
-
-        // if ((i >= 0) && (i < sections.length)) {
-        //     if (sectionStatus[i].toLowerCase() === _visible) {
-        //         $(".video-main#" + id).css("width","55vw");
-        //         $(".wide#" + id).css("width","115vw");
-        //         sectionStatus[i] = _hidden;
-        //     } else {
-        //         $(".video-main#" + id).css("width","90vw");
-        //         $(".wide#" + id).css("width","150vw");
-        //         sectionStatus[i] = _visible;
-        //     }
-        // }
-
-        // if(!isHidden) {
-        //     $(".video-main#" + id).css("width","55vw");
-        //     $(".wide#" + id).css("width","115vw");  
-        //     isHidden = true;
-        // } else {
-        //     $(".video-main#" + id).css("width","90vw");
-        //     $(".wide#" + id).css("width","150vw");
-        //     isHidden = false;
-        // }
-
     });
 });
 
