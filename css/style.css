@@ -135,7 +135,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F0850F;
+    background-color: #f0801a;
     color: white;
     text-align: center;
     width: 2vw;
@@ -154,6 +154,8 @@ body {
 }
 
 .number {
+    overflow: visible !important;
+    white-space: nowrap !important;
     width: 16vw;
     line-height: 16vw;
 }
@@ -197,7 +199,7 @@ video {
 .icon-desc {
     color: white;
     font-size: .5rem;
-    background-color: #F0850F;;
+    background-color: #f0801a;;
     height: 0px;
     overflow: hidden;
 }
@@ -236,7 +238,7 @@ video {
     padding: 2.5vw 0vw;
     margin: 0vw 5vw;
     min-height: 5vw;
-    border-color: #F0850F;
+    border-color: #f0801a;
 }
 
 
@@ -251,10 +253,14 @@ video {
 }
 
 a, a:visited {
-    color: #F0850F;
+    color: #f0801a;
     text-decoration: underline;
 }
 
 a:hover {
     color: white;
+}
+
+.margin-left-2_5 {
+    margin-left: 2.5vw;
 }

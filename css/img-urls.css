@@ -5,3 +5,11 @@
 .video-placeholder {
     background-image: url(../res/vid/placeholder.mp4);
 }
+
+.img-pipi-shia-01 {
+    background-image: url(../res/img/pipi-shia-dataset.gif);
+}
+
+.img-pipi-shia-02 {
+    background-image: url(../res/img/pipi-shia-02.gif);
+}

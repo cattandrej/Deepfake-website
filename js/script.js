@@ -5,12 +5,19 @@ const _sections = [
     "second",
     "third",
     "forth",
-    "fifth"
+    "fifth",
+    "sixth"
 ];
 
+//
+// CONST VARIABLES
+// 
 const _visible = "visible";
 const _hidden = "hidden";
+
+// resizable: div element can change size
 const _resizable = "resizable";
+// resizable: div element cannot change size
 const _fixed = "fixed";
 
 //
@@ -25,12 +32,16 @@ class Section {
     }
 }
 
+//
+// SECTIONS BEHAVIOUR DESCRIPTION
+//
 var sectionList = [
     new Section(_sections[0], _fixed, _visible),
     new Section(_sections[1], _fixed, _visible),
-    new Section(_sections[2], _resizable, _visible),
-    new Section(_sections[3], _fixed, _visible),
-    new Section(_sections[4], _fixed, _visible)
+    new Section(_sections[2], _fixed, _visible),
+    new Section(_sections[3], _resizable, _visible),
+    new Section(_sections[4], _fixed, _visible),
+    new Section(_sections[5], _fixed, _visible)
 ]
 
 //
@@ -80,9 +91,14 @@ var amount = vw * 5;
 
 $(window).resize(function() {
     var tmp = vw;
-    vw = $( window ).width() / 100;
+    vw = $(window).width() / 100;
 
     amount = vw * (amount / tmp);
+
+    var margin = (window.innerHeight - (($(window).width() * 9) / 16)) / 2;
+    console.log("H = " + window.innerHeight + "; W = " + $(window).width());
+    console.log(margin);
+    $(".auto-margin").css("height", margin + "px");
 });
 
 
