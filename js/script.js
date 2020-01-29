@@ -97,9 +97,7 @@ $(document).ready(function () {
     $(".button").click(function (event) {
         var id = event.target.id;
 
-        //
-        // SCROLLING
-        //
+
         console.log(id);
 
 
@@ -115,9 +113,15 @@ $(document).ready(function () {
             i++;
         }
 
+        $( "div.button#" + id + " > p#plus" ).toggle();
+        $( "div.button#" + id + " > p#minus" ).toggle();
+
         if (sectionList[i].type === _fixed) {
             console.log("I AM FIXED!");
 
+            //
+            // SCROLLING
+            //
             $("#" + id).stop().animate({ scrollLeft: (7 * amount * sectionList[i].dir) }, 250, 'swing', function () {
             });
 
@@ -125,6 +129,7 @@ $(document).ready(function () {
         } else {
             console.log(sectionList[i]);
             console.log("I AM RESIZABLE!");
+
             if (sectionList[i].status === _visible) {
 
                 $(".video-main#" + id).css("width","55vw");

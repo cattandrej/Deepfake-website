@@ -3,6 +3,10 @@ body, div, h1, p, img {
     padding: 0px;
 }
 
+body {
+    background-color: black;
+}
+
 .container {
     margin: 0px;
     padding: 0px;
@@ -17,7 +21,6 @@ body, div, h1, p, img {
 .video-text-container {
     padding-left: 5vw;
     padding-right: 5vw;
-    background-color: teal;
 }
 
 .video-player {
@@ -26,7 +29,6 @@ body, div, h1, p, img {
     align-items: center;
     height: 100%;
     width: 100%;
-    background-color: slateblue;
 }
 
 .video-title {
@@ -57,7 +59,6 @@ body, div, h1, p, img {
 .video-player-container {
     padding-left: 5vw;
     padding-right: 5vw;
-    background-color: skyblue;
     overflow: hidden;
     height: 30vw;
     width: 100%;
@@ -79,14 +80,12 @@ body, div, h1, p, img {
     float: left;
     height: 100%;
     width: 35vw;
-    background-color: slateblue;
     overflow: hidden;
 }
 
 .col-video-player {
     display: inline-block;
     width: 55vw;
-    background-color: yellowgreen;
     height: 100%;
 }
 
@@ -100,15 +99,14 @@ body, div, h1, p, img {
     height: 100%;
     width: 90vw;
     display: inline-block;
-    background-color: wheat;
     overflow: hidden;
 }
 
 .video-info {
+    background-color: rgba(255,255,255,.1);
     height: 100%;
     width: 55vw;
     display: inline-block;
-    background-color: salmon;
 }
 
 .content {
@@ -125,15 +123,12 @@ body, div, h1, p, img {
 }
 
 .red {
-    background-color: red;
 }
 
 .green {
-    background-color: green;
 }
 
 .blue {
-    background-color: blue;
 }
 
 .button {
@@ -149,16 +144,19 @@ body, div, h1, p, img {
     border-radius: 0vw;
     transform: translateX(-50%);
     line-height: 0px;
+    transition: all .125s ease;
+
 }
 
 .button:hover {
+    width: 2.5vw;
+    height: 22.5vw;
     background-color: red;
 }
 
 .number {
     width: 16vw;
     line-height: 16vw;
-    background-color: turquoise;
 }
 
 video {
@@ -199,7 +197,6 @@ video {
 }
 
 .icon-desc {
-
     color: white;
     font-size: .5rem;
     background-color: indianred;
@@ -219,4 +216,8 @@ video {
     padding: 0px 1.25vw 0px 1.25vw;
     overflow: hidden;
     transition: all .125s ease;
+}
+
+#minus {
+    transform: translateY(-.33vw);
 }
