@@ -326,7 +326,7 @@ a:hover {
 }
 
 .video-collection {
-    
+
 }
 
 .video-controls {
@@ -343,4 +343,9 @@ a:hover {
     margin: 0 2.5vw 2.5vw 2.5vw;
     height: 100%;
     width: 50px;
+}
+
+.graph{
+  width: 100%;
+  height: auto;
 }
