@@ -13,7 +13,11 @@ const _sections = [
     "fifth",
     "sixth",
     "seventh",
-    "eighth"
+    "eighth",
+    "ninth",
+    "tenth",
+    "eleventh",
+    "twelfth"
 ];
 
 //
@@ -54,7 +58,11 @@ var sectionList = [
     new Section(_sections[4], _interactive, _fixed, _visible),
     new Section(_sections[5], _experiment, _fixed, _visible),
     new Section(_sections[6], _defaul, _resizable, _visible),
-    new Section(_sections[7], _defaul, _fixed, _visible)
+    new Section(_sections[7], _defaul, _fixed, _visible),
+    new Section(_sections[8], _defaul, _fixed, _visible),
+    new Section(_sections[9], _defaul, _fixed, _visible),
+    new Section(_sections[10], _defaul, _fixed, _visible),
+    new Section(_sections[11], _defaul, _fixed, _visible)
 ]
 
 //
