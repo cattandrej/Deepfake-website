@@ -9,7 +9,7 @@ $("g#Arthur_Sherlock_2000").hide();
 $("g#Andrej-jones").hide();
 $("g#Pipi_Shia").hide();
 
-$("g#Capa_1").click(function() {
+$("#Capa_1").click(function() {
   $("g#Ivana_Anne").hide();
   $("g#Pipi_Natalie").hide();
   $("g#Arthur_Andrej_h128").hide();
