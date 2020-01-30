@@ -1,6 +1,10 @@
 console.log("HELLO");
 updateAutoMargin();
 
+$(".video-collection").css("height", $(".video-interactive-container").css("height"));
+
+var vid = document.getElementById("vid-post");
+
 const _sections = [
     "first",
     "second",
@@ -206,9 +210,50 @@ $('.icon').mouseenter(function (event) {
     console.log("mouseleave ON " + id);
 });
 
+var videoIDList = [
+    "original",
+    "mask",
+    "alignment",
+    "deepfake",
+    "post"
+]
+
+$('.ivana-anne').mouseenter(function (event) {
+    console.log("CONTROLS ENTER");
+
+    var currentTime = vid.currentTime;
+    id = event.target.id;
+    vid = document.getElementById("vid-" + id);
+
+
+    for (var i = 0; i < videoIDList.length; i++) {
+        $(".video-player#" + videoIDList[i]).css("display", "none");       
+    }
+
+    $(".video-player#" + id).css("display", "");
+    
+    vid.currentTime = currentTime;
+
+    
+    console.log("mouseenter ON " + id);
+});
+
+
+
 function updateAutoMargin() {
+
+    $(".video-collection").css("height", $(".video-interactive-container").css("height"));
+
     var margin = (window.innerHeight - (($(window).width() * 9) / 16)) / 2;
     console.log("H = " + window.innerHeight + "; W = " + $(window).width());
     console.log(margin);
     $(".auto-margin").css("height", margin + "px");
 }
+
+function getCurTime() { 
+    alert(vid.currentTime);
+  } 
+  
+  function setCurTime() { 
+    vid.currentTime=5;
+  } 
