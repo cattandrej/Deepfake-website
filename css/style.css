@@ -71,7 +71,8 @@ body {
 }
 
 .scale-2 {
-    transform: scale(1.25);
+    width: 100%;
+    height: auto;
 }
 
 .img-container {
@@ -239,6 +240,10 @@ video {
     min-height: 5vw;
 }
 
+.grap {
+    width: 100%;
+}
+
 .info-additional {
     font-size: .7em;
     border-top: 1px solid;
@@ -342,5 +347,9 @@ a:hover {
     background-color: cadetblue;
     margin: 0 2.5vw 2.5vw 2.5vw;
     height: 100%;
-    width: 50px;
+    min-width: 5vw;
+}
+
+.icon-text {
+    text-align: center;
 }
