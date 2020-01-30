@@ -224,16 +224,17 @@ $('.ivana-anne').mouseenter(function (event) {
     var currentTime = vid.currentTime;
     id = event.target.id;
     vid = document.getElementById("vid-" + id);
+    
+    
 
 
     for (var i = 0; i < videoIDList.length; i++) {
         $(".video-player#" + videoIDList[i]).css("display", "none");       
+        $(".dot#" + videoIDList[i]).removeClass("dot-active");
     }
-
-    $(".video-player#" + id).css("display", "");
-    
     vid.currentTime = currentTime;
-
+    $(".dot#" + id).addClass("dot-active");
+    $(".video-player#" + id).css("display", "");
     
     console.log("mouseenter ON " + id);
 });
@@ -256,4 +257,4 @@ function getCurTime() {
   
   function setCurTime() { 
     vid.currentTime=5;
-  } 
+  }
