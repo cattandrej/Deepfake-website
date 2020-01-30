@@ -1,4 +1,5 @@
 console.log("HELLO");
+updateAutoMargin();
 
 const _sections = [
     "first",
@@ -6,7 +7,8 @@ const _sections = [
     "third",
     "forth",
     "fifth",
-    "sixth"
+    "sixth",
+    "seventh"
 ];
 
 //
@@ -41,7 +43,8 @@ var sectionList = [
     new Section(_sections[2], _fixed, _visible),
     new Section(_sections[3], _resizable, _visible),
     new Section(_sections[4], _fixed, _visible),
-    new Section(_sections[5], _fixed, _visible)
+    new Section(_sections[5], _fixed, _visible),
+    new Section(_sections[6], _resizable, _visible)
 ]
 
 //
@@ -95,10 +98,7 @@ $(window).resize(function() {
 
     amount = vw * (amount / tmp);
 
-    var margin = (window.innerHeight - (($(window).width() * 9) / 16)) / 2;
-    console.log("H = " + window.innerHeight + "; W = " + $(window).width());
-    console.log(margin);
-    $(".auto-margin").css("height", margin + "px");
+    updateAutoMargin();
 });
 
 
@@ -110,17 +110,19 @@ var isHidden = false;
 // SCROLLING AND RESIZING ANIMATION
 //
 $(document).ready(function () {
-    $(".button").click(function (event) {
+    $(".button, #plus, #minus").click(function (event) {
+
         var id = event.target.id;
-
-
+        if (event.target.id === "plus" || event.target.id === "minus") {
+            id = $(this).closest('div').attr('id');
+        }
         console.log(id);
 
 
         //
         // RESIZING
         //
-        console.log($(".video-main#" + id).css('width'));
+        //console.log($(".video-main#" + id).css('width'));
 
 
         // SELECTING CURRENT SECTION
@@ -128,6 +130,8 @@ $(document).ready(function () {
         while (sectionList[i].id != id) {
             i++;
         }
+
+        console.log(event.target.id + ": I've found section number " + i + " whit id " + id);
 
         $( "div.button#" + id + " > p#plus" ).toggle();
         $( "div.button#" + id + " > p#minus" ).toggle();
@@ -147,7 +151,6 @@ $(document).ready(function () {
             console.log("I AM RESIZABLE!");
 
             if (sectionList[i].status === _visible) {
-
                 $(".video-main#" + id).css("width","55vw");
                 $(".wide#" + id).css("width","115vw");  
                 sectionList[i].status = _hidden;
@@ -180,3 +183,10 @@ $('.icon').mouseenter(function (event) {
     $(".icon-desc#" + id).css("padding", "0px 1.25vw 0px 1.25vw");
     console.log("mouseleave ON " + id);
 });
+
+function updateAutoMargin() {
+    var margin = (window.innerHeight - (($(window).width() * 9) / 16)) / 2;
+    console.log("H = " + window.innerHeight + "; W = " + $(window).width());
+    console.log(margin);
+    $(".auto-margin").css("height", margin + "px");
+}

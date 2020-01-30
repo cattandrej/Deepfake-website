@@ -264,3 +264,8 @@ a:hover {
 .margin-left-2_5 {
     margin-left: 2.5vw;
 }
+
+.video-desc-container {
+    display: inline-block;
+    white-space: nowrap
+}
