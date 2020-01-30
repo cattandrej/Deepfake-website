@@ -331,7 +331,7 @@ a:hover {
 }
 
 .video-collection {
-    
+
 }
 
 .video-controls {
@@ -353,3 +353,8 @@ a:hover {
 .icon-text {
     text-align: center;
 }
+
+.graph{
+    width: 100%;
+    height: auto;
+  }
