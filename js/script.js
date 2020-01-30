@@ -8,7 +8,8 @@ const _sections = [
     "forth",
     "fifth",
     "sixth",
-    "seventh"
+    "seventh",
+    "eighth"
 ];
 
 //
@@ -21,14 +22,18 @@ const _hidden = "hidden";
 const _resizable = "resizable";
 // resizable: div element cannot change size
 const _fixed = "fixed";
+const _defaul = "default";
+const _experiment = "experiment";
+const _interactive = "interactive";
 
 //
 // SECTIONS DECLARATION
 //
 class Section {
-    constructor(id, type, status) {
+    constructor(id, type, layout, status) {
         this.id = id;
         this.type = type;
+        this.layout = layout;
         this.status = status;
         this.dir = 1;
     }
@@ -38,13 +43,14 @@ class Section {
 // SECTIONS BEHAVIOUR DESCRIPTION
 //
 var sectionList = [
-    new Section(_sections[0], _fixed, _visible),
-    new Section(_sections[1], _fixed, _visible),
-    new Section(_sections[2], _fixed, _visible),
-    new Section(_sections[3], _resizable, _visible),
-    new Section(_sections[4], _fixed, _visible),
-    new Section(_sections[5], _fixed, _visible),
-    new Section(_sections[6], _resizable, _visible)
+    new Section(_sections[0], _defaul, _fixed, _visible),
+    new Section(_sections[1], _defaul, _fixed, _visible),
+    new Section(_sections[2], _defaul, _fixed, _visible),
+    new Section(_sections[3], _defaul, _resizable, _visible),
+    new Section(_sections[4], _interactive, _fixed, _visible),
+    new Section(_sections[5], _experiment, _fixed, _visible),
+    new Section(_sections[6], _defaul, _resizable, _visible),
+    new Section(_sections[7], _defaul, _fixed, _visible)
 ]
 
 //
@@ -56,6 +62,22 @@ var wheelEventTime = Date.now();
 var currentSection = 0;
 
 function scroll_to(id) {
+    
+    var i = 0;
+    while(i < _sections.length) {
+        if (id === _sections[i]) {
+            if (sectionList[i].type === _experiment) {
+                console.log("EXPERIMENT!");
+                $("body").css("background-color", "rgba(0, 0, 0, .8)");
+            } else {
+                if (!($("body").css("background-color") === "black")) {
+                    $("body").css("background-color", "black");
+                }
+            }
+        }
+        i++;
+    }
+
     $('html,body').animate({
         scrollTop: $('#' + id).offset().top
     }, 'slow');
@@ -136,7 +158,7 @@ $(document).ready(function () {
         $( "div.button#" + id + " > p#plus" ).toggle();
         $( "div.button#" + id + " > p#minus" ).toggle();
 
-        if (sectionList[i].type === _fixed) {
+        if (sectionList[i].layout === _fixed) {
             console.log("I AM FIXED!");
 
             //
