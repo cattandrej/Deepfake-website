@@ -304,7 +304,7 @@ function setCurTime() {
 
 var scrollingValue = 0;
 var wasScrolling = false;
-var isScrolling = false; 
+var isScrolling = false;
 var previousScrollingValue = 0;
 
 var wheelEventTime = 0;
@@ -312,16 +312,18 @@ var wheelEventTime = 0;
 window.addEventListener("wheel", event => {
 
     console.log(event.deltaY);
-    
+
     if (event.deltaY > 75) {
         // section++
 
         if ((event.deltaY > previousScrollingValue) && (Date.now() - wheelEventTime > 250)) {
             wheelEventTime = Date.now();
-            currentSection++;
+            if (currentSection < _sections.length - 1) {
+                currentSection++;
+            }
             console.log("------------>SCROLLING DOWN");
             scroll_to(_sections[currentSection]);
-            
+
         }
     }
 
@@ -330,7 +332,9 @@ window.addEventListener("wheel", event => {
 
         if ((event.deltaY < previousScrollingValue) && (Date.now() - wheelEventTime > 250)) {
             wheelEventTime = Date.now();
-            currentSection--;
+            if (currentSection > 0) {
+                currentSection--;
+            }
             scroll_to(_sections[currentSection]);
         }
     }
@@ -338,35 +342,35 @@ window.addEventListener("wheel", event => {
     previousScrollingValue = event.deltaY;
 
 
-   
+
     // if (!wasScrolling) {
     //     wasScrolling = true;
     //     scrollingValue = event.deltaY;
-        
+
     //     if (event.deltaY > 0) {
     //         currentSection++
     //     }
-          
+
     //     if (event.deltaY < 0) {
     //         currentSection--
     //     }
 
     //     scroll_to(_sections[currentSection]);
     // }
-    
 
-	// Clear our timeout throughout the scroll
-	window.clearTimeout( isScrolling );
 
-	// Set a timeout to run after scrolling ends
-	isScrolling = setTimeout(function() {
+    // Clear our timeout throughout the scroll
+    window.clearTimeout(isScrolling);
 
-		// Run the callback
-        console.log( 'Scrolling has stopped.' );
+    // Set a timeout to run after scrolling ends
+    isScrolling = setTimeout(function () {
+
+        // Run the callback
+        console.log('Scrolling has stopped.');
         scrollingValue = 0;
         wasScrolling = false;
 
-	}, 1000);
+    }, 1000);
 }, false);
 
 
@@ -418,15 +422,15 @@ function handleTouchStart(evt) {
     yDown = evt.touches[0].clientY;
 };
 function handleTouchMove(evt) {
-    if ( ! xDown || ! yDown ) {
+    if (!xDown || !yDown) {
         return;
     } //nessun movimento
     var xUp = evt.touches[0].clientX;
     var yUp = evt.touches[0].clientY;
     var xDiff = xDown - xUp;
     var yDiff = yDown - yUp;
-    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*Trovo quello più significativo sulle assi X e Y*/
-        if ( xDiff > 0 ) {
+    if (Math.abs(xDiff) > Math.abs(yDiff)) {/*Trovo quello più significativo sulle assi X e Y*/
+        if (xDiff > 0) {
             /* swipe sinistra */
             console.log("Swipe SINISTRA");
         } else {
@@ -434,15 +438,19 @@ function handleTouchMove(evt) {
             console.log("Swipe DESTRA");
         }//right
     } else {
-        if ( yDiff > 0 ) {
+        if (yDiff > 0) {
             /* swipe alto */
             console.log("Swipe ALTO");
-            currentSection++;
+            if (currentSection < _sections.length - 1) {
+                currentSection++;
+            }
             scroll_to(_sections[currentSection]);
         } else {
             /* swipe basso */
             console.log("Swipe BASSO");
-            currentSection--;
+            if (currentSection > 0) {
+                currentSection--;
+            }
             scroll_to(_sections[currentSection]);
         }
     }
