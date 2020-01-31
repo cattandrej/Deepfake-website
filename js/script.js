@@ -369,6 +369,7 @@ window.addEventListener("wheel", event => {
 
         // Run the callback
         console.log('Scrolling has stopped.');
+        previousScrollingValue = 0;
         scrollingValue = 0;
         wasScrolling = false;
 

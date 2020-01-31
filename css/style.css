@@ -306,11 +306,9 @@ a:hover {
 }
 
 .interactive {
-    position: absolute;
-    width: 87.5vw;
     height: auto;
     max-height: 50vh;
-    padding: 50 100 50 100;
+    padding: 50 0 50 0;
 }
 
 .video-interactive-container {
