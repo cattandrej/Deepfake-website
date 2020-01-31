@@ -462,6 +462,7 @@ html, body {
 /* footer padding */
 footer {
   padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
   /*three rem pudding bottom for xs columns*/

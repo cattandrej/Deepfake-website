@@ -587,7 +587,7 @@ h1 {
   font-size: .6em;
 }
 
-}
+
 
 /* one rem pudding bottom for xs columns*/
 .space-xs-1 {
@@ -611,4 +611,59 @@ h1 {
      font-weight: 700;
      text-align: left;
     white-space: normal;
+}
+
+
+/* FOOTER */
+
+/* footer padding */
+footer {
+    padding-top: 1rem;
+    
+  }
+  
+    /*three rem pudding bottom for xs columns*/
+    .space-sm-3 {
+      padding-bottom: 1rem;
+    }
+  
+    /* logo style */
+  .logo {
+      margin: 0;
+      height: 50px;
+    }
+  
+    .download{
+      padding: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .icondown {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.2rem;
+    }
+  
+    .logdown{
+      padding: 0;
+    }
+    
+    .down {
+      padding: 0;
+    }
+  
+    .downtext{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .center {
+        text-align: center;
+        white-space: normal;
+      }
+  
 }
