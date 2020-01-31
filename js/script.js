@@ -17,7 +17,8 @@ const _sections = [
     "ninth",
     "tenth",
     "eleventh",
-    "twelfth"
+    "twelfth",
+    "thirteenth"
 ];
 
 
@@ -26,7 +27,7 @@ var scrollLeft;
 
 //
 // CONST VARIABLES
-// 
+//
 const _visible = "visible";
 const _hidden = "hidden";
 
@@ -66,7 +67,8 @@ var sectionList = [
     new Section(_sections[8], _defaul, _fixed, _visible),
     new Section(_sections[9], _experiment, _fixed, _visible),
     new Section(_sections[10], _experiment, _fixed, _visible),
-    new Section(_sections[11], _defaul, _fixed, _visible)
+    new Section(_sections[11], _defaul, _fixed, _visible),
+    new Section(_sections[12], _defaul, _fixed, _visible)
 ]
 
 //
@@ -267,7 +269,7 @@ function setCurTime() {
 
 //             }
 //         }
-//     } 
+//     }
 
 
 // };
