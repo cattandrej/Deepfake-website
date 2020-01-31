@@ -63,3 +63,8 @@ h1 {
 .smaller {
   font-size: .6em;
 }
+
+.logo {
+  margin: 0;
+  height: 80px;
+}
