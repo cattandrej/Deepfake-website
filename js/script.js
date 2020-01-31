@@ -129,7 +129,7 @@ var isHidden = false;
 // SCROLLING AND RESIZING ANIMATION
 //
 $(document).ready(function () {
-    $(".button, #plus, #minus").click(function (event) {
+    $("#plus, #minus").click(function (event) {
 
         var id = event.target.id;
         if (event.target.id === "plus" || event.target.id === "minus") {
