@@ -84,21 +84,19 @@
               In this video Elon Musk’s face has been translated to a baby.
               This type of faceswap is the most common use of deepfake technologies.
               The edges are not sharp and there is a difference in skin colour.
-
             </div>
             <div class="video-imgs">
-              <div class="img-container img-small">
-                <div class="img-placeholder img-adapt">
+              <div class="img-container img-small" id="DF">
+                <div class="img-01_Elon_Musk_DF img-adapt">
                 </div>
               </div>
-              <div class="img-container img-small">
-                <div class="img-placeholder img-adapt">
+              <div class="img-container img-small" id="or">
+                <div class="img-01_Elon_Musk_or img-adapt">
                 </div>
               </div>
             </div>
           </div>
         </div>
-
         <div class="col-video-player">
           <div class="video-row">
             <div class="video-player-container">
@@ -116,14 +114,6 @@
           <div class="icon-section">
             <div class="icons-row">
               <img class="icon" id="skin_color" src="res/ico/skin_tone.svg">
-              <img class="icon" id="edges" src="res/ico/edges.svg">
-              <img class="icon" id="expression" src="res/ico/expression.svg">
-              <img class="icon" id="blur" src="res/ico/blur.svg">
-              <img class="icon" id="profile" src="res/ico/profile.svg">
-              <img class="icon" id="flicker" src="res/ico/flicker.svg">
-              <img class="icon" id="perspective" src="res/ico/perspective.svg">
-              <img class="icon" id="occlusion" src="res/ico/occlusion.svg">
-            </div>
             <div class="icon-desc-row">
               <div class="icon-desc" id="skin_color">
                 <p>
@@ -132,53 +122,7 @@
                   The face seems to be covered by a layer of different colours, showing edges or spots.
                 </p>
               </div>
-              <div class="icon-desc" id="edges">
-                <p>
-                  <b>Visible edges:</b><br>
-                  The edges of the mask are visible. This can either be as a sharp,
-                  or blurred edge surrounding the face.
-                </p>
-              </div>
-              <div class="icon-desc" id="expression">
-                <p>
-                  <b>Mismatch expressions:</b><br>
-                  The expressions on the face do not match the target face. Natural
-                  behaviour of facial features seems unarticulated, doubled, or not present.
-                </p>
-              </div>
-              <div class="icon-desc" id="blur">
-                <p>
-                  <b>Blurred face:</b><br>
-                  The mask is blurred. There is a difference in sharpness between the mask
-                  and the rest of the video, either blurred or a different resolution.
-                </p>
-              </div>
-              <div class="icon-desc" id="profile">
-                <p>
-                  <b>Profile borders:</b><br>
-                  The side view of the face seems incorrect. The deepfake mask is not working,
-                  less detailed, or incorrectly aligned.
-                </p>
-              </div>
-              <div class="icon-desc" id="flicker">
-                <p>
-                  <b>Flicker effect:</b><br>
-                  Flicker of the original and the deepfake face. In critical moments the
-                  algorithm can’t recognise the face and ceases to create the mask for a moment.
-                </p>
-              </div>
-              <div class="icon-desc" id="perspective">
-                <p>
-                  <b>Wrong perspective:</b><br>
-                  The deepfake has a different perspective from the rest of the video.
-                  The source and target video differ in focal length.
-                </p>
-              </div>
-              <div class="icon-desc" id="occlusion">
-                <p>
-                  <b>Face occlusion</b><br>
-                  When objects pass in front of the face, the mask distorts or covers the object.
-                </p>
+
               </div>
             </div>
           </div>
@@ -195,9 +139,9 @@
           <p>
             A deepfake is created by a computer program that trains itself to
             reproduce a face. By adjusting parameters in its system, the program
-             becomes better in recreating a specific person, this is a type of
-             deep learning. As an output, the model creates an overlay for the
-             face, traces of this facial mask can be seen in this video.
+            becomes better in recreating a specific person, this is a type of
+            deep learning. As an output, the model creates an overlay for the
+            face, traces of this facial mask can be seen in this video.
           </p>
         </div>
         <div class="info-additional">
@@ -236,13 +180,8 @@
           <div class="icon-section">
             <div class="icons-row">
               <img class="icon" id="skin_color" src="res/ico/skin_tone.svg">
-              <img class="icon" id="edges" src="res/ico/edges.svg">
               <img class="icon" id="expression" src="res/ico/expression.svg">
-              <img class="icon" id="blur" src="res/ico/blur.svg">
-              <img class="icon" id="profile" src="res/ico/profile.svg">
-              <img class="icon" id="flicker" src="res/ico/flicker.svg">
-              <img class="icon" id="perspective" src="res/ico/perspective.svg">
-              <img class="icon" id="occlusion" src="res/ico/occlusion.svg">
+              <img class="icon" id="edges" src="res/ico/edges.svg">
             </div>
             <div class="icon-desc-row">
               <div class="icon-desc" id="skin_color">
@@ -266,40 +205,7 @@
                   behaviour of facial features seems unarticulated, doubled, or not present.
                 </p>
               </div>
-              <div class="icon-desc" id="blur">
-                <p>
-                  <b>Blurred face:</b><br>
-                  The mask is blurred. There is a difference in sharpness between the mask
-                  and the rest of the video, either blurred or a different resolution.
-                </p>
-              </div>
-              <div class="icon-desc" id="profile">
-                <p>
-                  <b>Profile borders:</b><br>
-                  The side view of the face seems incorrect. The deepfake mask is not working,
-                  less detailed, or incorrectly aligned.
-                </p>
-              </div>
-              <div class="icon-desc" id="flicker">
-                <p>
-                  <b>Flicker effect:</b><br>
-                  Flicker of the original and the deepfake face. In critical moments the
-                  algorithm can’t recognise the face and ceases to create the mask for a moment.
-                </p>
-              </div>
-              <div class="icon-desc" id="perspective">
-                <p>
-                  <b>Wrong perspective:</b><br>
-                  The deepfake has a different perspective from the rest of the video.
-                  The source and target video differ in focal length.
-                </p>
-              </div>
-              <div class="icon-desc" id="occlusion">
-                <p>
-                  <b>Face occlusion</b><br>
-                  When objects pass in front of the face, the mask distorts or covers the object.
-                </p>
-              </div>
+
 
             </div>
           </div>
@@ -317,8 +223,8 @@
               </div>
               <div class="video-desc orange">
                 Deepfake videos can be made with consumer computers but you need
-                 quite a powerful graphical card. This video shows our first trial.
-                 It is very important to have the right source videos.
+                quite a powerful graphical card. This video shows our first trial.
+                It is very important to have the right source videos.
               </div>
               <div class="video-imgs">
                 <div class="img-container img-small" id="pipi">
@@ -520,8 +426,8 @@
           </div>
           <div class="icon-section">
             <div class="video-imgs">
-              <div class="img-container img-small margin-left-2_5">
-                <div class="img-placeholder img-adapt">
+              <div class="img-container img-small margin-left-2_5" id="Sh">
+                <div class="img-05_Sherlock img-adapt">
                 </div>
               </div>
               <div class="img-container img-small">
@@ -592,13 +498,10 @@
           <div class="icon-section">
             <div class="icons-row">
               <img class="icon" id="skin_color" src="res/ico/skin_tone.svg">
-              <img class="icon" id="edges" src="res/ico/edges.svg">
               <img class="icon" id="expression" src="res/ico/expression.svg">
+              <img class="icon" id="edges" src="res/ico/edges.svg">
               <img class="icon" id="blur" src="res/ico/blur.svg">
               <img class="icon" id="profile" src="res/ico/profile.svg">
-              <img class="icon" id="flicker" src="res/ico/flicker.svg">
-              <img class="icon" id="perspective" src="res/ico/perspective.svg">
-              <img class="icon" id="occlusion" src="res/ico/occlusion.svg">
             </div>
             <div class="icon-desc-row">
               <div class="icon-desc" id="skin_color">
@@ -636,26 +539,6 @@
                   less detailed, or incorrectly aligned.
                 </p>
               </div>
-              <div class="icon-desc" id="flicker">
-                <p>
-                  <b>Flicker effect:</b><br>
-                  Flicker of the original and the deepfake face. In critical moments the
-                  algorithm can’t recognise the face and ceases to create the mask for a moment.
-                </p>
-              </div>
-              <div class="icon-desc" id="perspective">
-                <p>
-                  <b>Wrong perspective:</b><br>
-                  The deepfake has a different perspective from the rest of the video.
-                  The source and target video differ in focal length.
-                </p>
-              </div>
-              <div class="icon-desc" id="occlusion">
-                <p>
-                  <b>Face occlusion</b><br>
-                  When objects pass in front of the face, the mask distorts or covers the object.
-                </p>
-              </div>
 
             </div>
           </div>
@@ -682,8 +565,8 @@
                   <div class="img-pipi-shia-01 img-adapt">
                   </div>
                 </div>
-                <div class="img-container img-small">
-                  <div class="img-pipi-shia-02 img-adapt">
+                <div class="img-container img-small" id="fb">
+                  <div class="img-pipi-fb img-adapt">
                   </div>
                 </div>
               </div>
@@ -745,8 +628,8 @@
               videos we used before, the algorithm now has difficulty keeping up.
             </div>
             <div class="video-imgs">
-              <div class="img-container img-small">
-                <div class="img-placeholder img-adapt">
+              <div class="img-container img-small" id="in">
+                <div class="img-07_Indiana img-adapt">
                 </div>
               </div>
               <div class="img-container img-small">
@@ -774,13 +657,12 @@
           <div class="icon-section">
             <div class="icons-row">
               <img class="icon" id="skin_color" src="res/ico/skin_tone.svg">
-              <img class="icon" id="edges" src="res/ico/edges.svg">
               <img class="icon" id="expression" src="res/ico/expression.svg">
+              <img class="icon" id="edges" src="res/ico/edges.svg">
               <img class="icon" id="blur" src="res/ico/blur.svg">
               <img class="icon" id="profile" src="res/ico/profile.svg">
               <img class="icon" id="flicker" src="res/ico/flicker.svg">
               <img class="icon" id="perspective" src="res/ico/perspective.svg">
-              <img class="icon" id="occlusion" src="res/ico/occlusion.svg">
             </div>
             <div class="icon-desc-row">
               <div class="icon-desc" id="skin_color">
@@ -830,12 +712,6 @@
                   <b>Wrong perspective:</b><br>
                   The deepfake has a different perspective from the rest of the video.
                   The source and target video differ in focal length.
-                </p>
-              </div>
-              <div class="icon-desc" id="occlusion">
-                <p>
-                  <b>Face occlusion</b><br>
-                  When objects pass in front of the face, the mask distorts or covers the object.
                 </p>
               </div>
 
@@ -899,8 +775,8 @@
           <div class="icon-section">
             <div class="icons-row">
               <img class="icon" id="skin_color" src="res/ico/skin_tone.svg">
-              <img class="icon" id="edges" src="res/ico/edges.svg">
               <img class="icon" id="expression" src="res/ico/expression.svg">
+              <img class="icon" id="edges" src="res/ico/edges.svg">
               <img class="icon" id="blur" src="res/ico/blur.svg">
               <img class="icon" id="profile" src="res/ico/profile.svg">
               <img class="icon" id="flicker" src="res/ico/flicker.svg">
@@ -1071,12 +947,12 @@
           </div>
           <div class="icon-section">
             <div class="video-imgs">
-              <div class="img-container img-small margin-left-2_5">
-                <div class="img-placeholder img-adapt">
+              <div class="img-container img-small margin-left-2_5" id="Con">
+                <div class="img-09_Constance img-adapt">
                 </div>
               </div>
-              <div class="img-container img-small">
-                <div class="img-placeholder img-adapt">
+              <div class="img-container img-small" id="Yue">
+                <div class="img-09_Yueling img-adapt">
                 </div>
               </div>
             </div>
