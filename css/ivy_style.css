@@ -63,3 +63,7 @@ h1 {
 .smaller {
   font-size: .6em;
 }
+
+.no-height {
+  height: auto;
+}
