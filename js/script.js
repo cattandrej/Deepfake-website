@@ -204,8 +204,8 @@ $('.icon').mouseenter(function (event) {
 });
 
 var videoIDList = [
-    "dataset",
     "original",
+    "dataset",
     "mask",
     "alignment",
     "deepfake",
@@ -467,3 +467,40 @@ function handleTouchMove(evt) {
     xDown = null;
     yDown = null;
 };
+
+var keys = {};
+window.addEventListener("keydown",
+    function(e){
+        keys[e.keyCode] = true;
+        switch(e.keyCode){
+            case 37: case 39: case 38:  case 40: // Arrow keys 
+            {
+                if (e.keyCode == 38) {
+                    if (currentSection > 0) {
+                        currentSection--;
+                    } else {
+                        currentSection == 0;
+                    }
+                    scroll_to(_sections[currentSection]);
+                }
+                if (e.keyCode == 40) {
+                    console.log("LOL");
+                    if (currentSection < _sections.length - 1) {
+                        currentSection++;
+                    } else {
+                        currentSection == _sections.length - 1;
+                    }
+                    scroll_to(_sections[currentSection]);
+                }
+                break;
+            }
+            case 32: e.preventDefault(); break; // Space
+            default: break; // do not block other keys
+        }
+    },
+false);
+window.addEventListener('keyup',
+    function(e){
+        keys[e.keyCode] = false;
+    },
+false);
