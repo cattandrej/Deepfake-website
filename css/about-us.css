@@ -14,7 +14,8 @@ html, body {
   align-items: center;
   justify-content: flex-end;
   color: white;
-  font-size: .75em;
+  font-size: 18px;
+  text-transform: uppercase;
   position: fixed;
   width: 100%;
   height: 2.5vw;

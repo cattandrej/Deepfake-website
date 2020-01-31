@@ -80,6 +80,13 @@ var wheelEventTime = Date.now();
 var currentSection = 0;
 
 function scroll_to(id) {
+    var vid;
+
+    for (var i = 0; i < _sections.length; i++) {
+        vid = document.getElementById("vid-" + _sections[i]);
+        if (vid != null)
+            vid.muted = true;
+    }
 
     var i = 0;
     while (i < _sections.length) {
@@ -95,6 +102,13 @@ function scroll_to(id) {
         }
         i++;
     }
+
+    vid = document.getElementById("vid-" + id);
+    if (vid != null) {
+        vid.muted = false;
+        vid.play();
+    }
+        
 
     $('html,body').animate({
         scrollTop: $('#' + id).offset().top
