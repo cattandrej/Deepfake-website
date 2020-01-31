@@ -411,3 +411,6 @@ a:hover {
 .about-title {
     margin: 2.5vw 5vw 2.5vw 10vw;
 }
+
+html, body {
+    touch-action: none; }

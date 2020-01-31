@@ -21,6 +21,9 @@ const _sections = [
 ];
 
 
+var scrollTop;
+var scrollLeft;
+
 //
 // CONST VARIABLES
 // 
@@ -75,9 +78,9 @@ var wheelEventTime = Date.now();
 var currentSection = 0;
 
 function scroll_to(id) {
-    
+
     var i = 0;
-    while(i < _sections.length) {
+    while (i < _sections.length) {
         if (id === _sections[i]) {
             if (sectionList[i].type === _experiment) {
                 console.log("EXPERIMENT!");
@@ -96,38 +99,17 @@ function scroll_to(id) {
     }, 'slow');
 }
 
-window.addEventListener("wheel", event => {
 
-    if (Date.now() - wheelEventTime > 500) {
-        delta = Math.sign(event.deltaY);
-        console.log(event.deltaY);
-
-        if (delta > 0) {
-            if (currentSection < _sections.length - 1) {
-                currentSection++;
-            }
-        }
-
-        if (delta < 0) {
-            if (currentSection > 0) {
-                currentSection--;
-            }
-        }
-
-        scroll_to(_sections[currentSection]);
-    }
-    wheelEventTime = Date.now();
-});
 
 //
 // SCREEN RESIZING AND
 // VIEWPORT VW CALCULATION
 //
 var body = $("div");
-var vw = $( window ).width() / 100;
+var vw = $(window).width() / 100;
 var amount = vw * 5;
 
-$(window).resize(function() {
+$(window).resize(function () {
     var tmp = vw;
     vw = $(window).width() / 100;
 
@@ -168,8 +150,8 @@ $(document).ready(function () {
 
         console.log(event.target.id + ": I've found section number " + i + " whit id " + id);
 
-        $( "div.button#" + id + " > p#plus" ).toggle();
-        $( "div.button#" + id + " > p#minus" ).toggle();
+        $("div.button#" + id + " > p#plus").toggle();
+        $("div.button#" + id + " > p#minus").toggle();
 
         if (sectionList[i].layout === _fixed) {
             console.log("I AM FIXED!");
@@ -186,13 +168,13 @@ $(document).ready(function () {
             console.log("I AM RESIZABLE!");
 
             if (sectionList[i].status === _visible) {
-                $(".video-main#" + id).css("width","55vw");
-                $(".wide#" + id).css("width","115vw");  
+                $(".video-main#" + id).css("width", "55vw");
+                $(".wide#" + id).css("width", "115vw");
                 sectionList[i].status = _hidden;
 
             } else {
-                $(".video-main#" + id).css("width","90vw");
-                $(".wide#" + id).css("width","150vw");
+                $(".video-main#" + id).css("width", "90vw");
+                $(".wide#" + id).css("width", "150vw");
                 sectionList[i].status = _visible;
             }
         }
@@ -233,25 +215,22 @@ $('.ivana-anne').mouseenter(function (event) {
     var currentTime = vid.currentTime;
     id = event.target.id;
     vid = document.getElementById("vid-" + id);
-    
-    
+
+
 
 
     for (var i = 0; i < videoIDList.length; i++) {
-        $(".video-player#" + videoIDList[i]).css("display", "none");       
+        $(".video-player#" + videoIDList[i]).css("display", "none");
         $(".dot#" + videoIDList[i]).removeClass("dot-active");
     }
     vid.currentTime = currentTime;
     $(".dot#" + id).addClass("dot-active");
     $(".video-player#" + id).css("display", "");
-    
+
     console.log("mouseenter ON " + id);
 });
 
-
-
 function updateAutoMargin() {
-
     $(".video-collection").css("height", $(".video-interactive-container").css("height"));
 
     var margin = (window.innerHeight - (($(window).width() * 9) / 16)) / 2;
@@ -260,28 +239,224 @@ function updateAutoMargin() {
     $(".auto-margin").css("height", margin + "px");
 }
 
-function getCurTime() { 
+function getCurTime() {
     alert(vid.currentTime);
-  } 
-  
-  function setCurTime() { 
-    vid.currentTime=5;
-  }
-
-window.addEventListener("scroll", checkVisibility());
-
-function checkVisibility() {
-    console.log("trololo");
-
 }
 
-var runOnScroll = function(event) {
-    console.log("Scrolling");
-    if ($('.container#third').visible()) {
-        //scroll_to(_sections[8]);
-        console.log("visible");
-    } else {
-    }
-};
+function setCurTime() {
+    vid.currentTime = 5;
+}
 
-window.addEventListener("scroll", runOnScroll);
+
+// var scrollEventTime = Date.now();
+
+// var runOnScroll = function (event) {
+
+
+
+//     if (Date.now() - scrollEventTime > 250) {
+//         for (var i = 0; i < _sections.length; i++) {
+//             if ($('.number#' + _sections[i]).visible()) {
+
+//                 if (currentSection != i) {
+//                     console.log("NOW VISIBLE: " + _sections[i]);
+//                     currentSection = i;
+//                     scroll_to(_sections[i]);
+//                     scrollEventTime = Date.now();
+//                 }
+
+//             }
+//         }
+//     } 
+
+
+// };
+
+// window.addEventListener("scroll", runOnScroll);
+
+// window.addEventListener("wheel", event => {
+
+
+//     if (Date.now() - wheelEventTime > 250) {
+//         delta = Math.sign(event.deltaY);
+//         console.log(event.deltaY);
+
+//         if (delta > 0) {
+
+//             console.log("+");
+//             if (currentSection < _sections.length - 1) {
+//                 currentSection++;
+//             }
+//         }
+
+//         if (delta < 0) {
+//             console.log("-");
+//             if (currentSection > 0) {
+//                 currentSection--;
+//             }
+//         }
+
+//         scroll_to(_sections[currentSection]);
+//     }
+//     wheelEventTime = Date.now();
+//     scrollEventTime = Date.now();
+// });
+
+var scrollingValue = 0;
+var wasScrolling = false;
+var isScrolling = false;
+var previousScrollingValue = 0;
+
+var wheelEventTime = 0;
+
+window.addEventListener("wheel", event => {
+
+    console.log(event.deltaY);
+
+    if (event.deltaY > 75) {
+        // section++
+
+        if ((event.deltaY > previousScrollingValue) && (Date.now() - wheelEventTime > 250)) {
+            wheelEventTime = Date.now();
+            if (currentSection < _sections.length - 1) {
+                currentSection++;
+            }
+            console.log("------------>SCROLLING DOWN");
+            scroll_to(_sections[currentSection]);
+
+        }
+    }
+
+    if (event.deltaY < -75) {
+        // section--
+
+        if ((event.deltaY < previousScrollingValue) && (Date.now() - wheelEventTime > 250)) {
+            wheelEventTime = Date.now();
+            if (currentSection > 0) {
+                currentSection--;
+            }
+            scroll_to(_sections[currentSection]);
+        }
+    }
+
+    previousScrollingValue = event.deltaY;
+
+
+
+    // if (!wasScrolling) {
+    //     wasScrolling = true;
+    //     scrollingValue = event.deltaY;
+
+    //     if (event.deltaY > 0) {
+    //         currentSection++
+    //     }
+
+    //     if (event.deltaY < 0) {
+    //         currentSection--
+    //     }
+
+    //     scroll_to(_sections[currentSection]);
+    // }
+
+
+    // Clear our timeout throughout the scroll
+    window.clearTimeout(isScrolling);
+
+    // Set a timeout to run after scrolling ends
+    isScrolling = setTimeout(function () {
+
+        // Run the callback
+        console.log('Scrolling has stopped.');
+        scrollingValue = 0;
+        wasScrolling = false;
+
+    }, 1000);
+}, false);
+
+
+var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
+
+function preventDefault(e) {
+    e = e || window.event;
+    if (e.preventDefault)
+        e.preventDefault();
+    e.returnValue = false;
+}
+
+function preventDefaultForScrollKeys(e) {
+    if (keys[e.keyCode]) {
+        preventDefault(e);
+        return false;
+    }
+}
+
+function disableScroll() {
+    if (window.addEventListener) // older FF
+        window.addEventListener('DOMMouseScroll', preventDefault, false);
+    document.addEventListener('wheel', preventDefault, { passive: false }); // Disable scrolling in Chrome
+    window.onwheel = preventDefault; // modern standard
+    window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+    window.ontouchmove = preventDefault; // mobile
+    document.onkeydown = preventDefaultForScrollKeys;
+}
+
+function enableScroll() {
+    if (window.removeEventListener)
+        window.removeEventListener('DOMMouseScroll', preventDefault, false);
+    document.removeEventListener('wheel', preventDefault, { passive: false }); // Enable scrolling in Chrome
+    window.onmousewheel = document.onmousewheel = null;
+    window.onwheel = null;
+    window.ontouchmove = null;
+    document.onkeydown = null;
+}
+
+document.addEventListener('wheel', preventDefault, { passive: false });
+
+
+document.addEventListener('touchstart', handleTouchStart, false); //bind & fire - evento di inizio tocco
+document.addEventListener('touchmove', handleTouchMove, false); // bind & fire - evento di movimento durante il tocco
+var xDown = null;
+var yDown = null;
+function handleTouchStart(evt) {
+    xDown = evt.touches[0].clientX;
+    yDown = evt.touches[0].clientY;
+};
+function handleTouchMove(evt) {
+    if (!xDown || !yDown) {
+        return;
+    } //nessun movimento
+    var xUp = evt.touches[0].clientX;
+    var yUp = evt.touches[0].clientY;
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+    if (Math.abs(xDiff) > Math.abs(yDiff)) {/*Trovo quello più significativo sulle assi X e Y*/
+        if (xDiff > 0) {
+            /* swipe sinistra */
+            console.log("Swipe SINISTRA");
+        } else {
+            /* swipe destra */
+            console.log("Swipe DESTRA");
+        }//right
+    } else {
+        if (yDiff > 0) {
+            /* swipe alto */
+            console.log("Swipe ALTO");
+            if (currentSection < _sections.length - 1) {
+                currentSection++;
+            }
+            scroll_to(_sections[currentSection]);
+        } else {
+            /* swipe basso */
+            console.log("Swipe BASSO");
+            if (currentSection > 0) {
+                currentSection--;
+            }
+            scroll_to(_sections[currentSection]);
+        }
+    }
+
+
+    /* reset values */
+    xDown = null;
+    yDown = null;
+};
