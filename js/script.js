@@ -204,12 +204,16 @@ $('.icon').mouseenter(function (event) {
 });
 
 var videoIDList = [
+    "dataset",
     "original",
     "mask",
     "alignment",
     "deepfake",
     "post"
 ]
+
+
+$(".dot#" + videoIDList[videoIDList.length - 1]).addClass("dot-active");
 
 $('.ivana-anne').mouseenter(function (event) {
     console.log("CONTROLS ENTER");

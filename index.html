@@ -313,7 +313,7 @@
 
       <div class="col-video-desc">
         <div class="number outline">
-          <p>01.</p>
+          <p>03.</p>
         </div>
         <div class="video-text-container">
           <div class="video-title white">
@@ -333,7 +333,18 @@
         <div class="video-row">
           <div class="interactive">
             <div class="video-collection" style="height: 25vw;">
+
               <div class="video-interactive-container" id="ref">
+                <div class="video-player-container video-int">
+                  <div class="video-player" id="dataset">
+                    <video autoplay loop muted class="scale-1" id="vid-dataset">
+                      <source src="res/vid/int00/0_dataset.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+              </div>
+
+              <div class="video-interactive-container translate-100" id="ref">
                 <div class="video-player-container video-int">
                   <div class="video-player" id="original">
                     <video autoplay loop muted class="scale-1" id="vid-original">
@@ -342,7 +353,7 @@
                   </div>
                 </div>
               </div>
-              <div class="video-interactive-container translate-100">
+              <div class="video-interactive-container translate-200">
                 <div class="video-player-container video-int">
                   <div class="video-player" id="mask">
                     <video autoplay loop muted class="scale-1" id="vid-mask">
@@ -351,7 +362,7 @@
                   </div>
                 </div>
               </div>
-              <div class="video-interactive-container translate-200">
+              <div class="video-interactive-container translate-300">
                 <div class="video-player-container video-int">
                   <div class="video-player" id="alignment">
                     <video autoplay loop muted class="scale-1" id="vid-alignment">
@@ -360,7 +371,7 @@
                   </div>
                 </div>
               </div>
-              <div class="video-interactive-container translate-300">
+              <div class="video-interactive-container translate-400">
                 <div class="video-player-container video-int">
                   <div class="video-player" id="deepfake">
                     <video autoplay loop muted class="scale-1" id="vid-deepfake">
@@ -369,7 +380,7 @@
                   </div>
                 </div>
               </div>
-              <div class="video-interactive-container translate-400">
+              <div class="video-interactive-container translate-500">
                 <div class="video-player-container video-int">
                   <div class="video-player" id="post">
                     <video autoplay loop muted class="scale-1" id="vid-post">
@@ -387,6 +398,16 @@
           </div>
         </div>
         <div class="video-controls">
+          <div class="ivana-anne" id="dataset">
+            <div class="dot" id="dataset">
+
+            </div>
+            <div class="icon-text" id="dataset">
+              <p id="dataset">
+                Dataset
+              </p>
+            </div>
+          </div>
           <div class="ivana-anne" id="original">
             <div class="dot" id="original">
 

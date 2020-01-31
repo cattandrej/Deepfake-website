@@ -330,6 +330,10 @@ a:hover {
     transform: translateY(-400%);
 }
 
+.translate-500 {
+    transform: translateY(-500%);
+}
+
 .video-collection {
 
 }
