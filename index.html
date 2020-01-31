@@ -334,7 +334,19 @@
           <div class="interactive">
             <div class="video-collection" style="height: 25vw;">
 
+
+
               <div class="video-interactive-container" id="ref">
+                <div class="video-player-container video-int">
+                  <div class="video-player" id="original">
+                    <video autoplay loop muted class="scale-1" id="vid-original">
+                      <source src="res/vid/int00/00-original.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+              </div>
+
+              <div class="video-interactive-container  translate-100" id="ref">
                 <div class="video-player-container video-int">
                   <div class="video-player" id="dataset">
                     <video autoplay loop muted class="scale-1" id="vid-dataset">
@@ -344,15 +356,6 @@
                 </div>
               </div>
 
-              <div class="video-interactive-container translate-100" id="ref">
-                <div class="video-player-container video-int">
-                  <div class="video-player" id="original">
-                    <video autoplay loop muted class="scale-1" id="vid-original">
-                      <source src="res/vid/int00/00-original.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                </div>
-              </div>
               <div class="video-interactive-container translate-200">
                 <div class="video-player-container video-int">
                   <div class="video-player" id="mask">
@@ -398,16 +401,7 @@
           </div>
         </div>
         <div class="video-controls">
-          <div class="ivana-anne" id="dataset">
-            <div class="dot" id="dataset">
 
-            </div>
-            <div class="icon-text" id="dataset">
-              <p id="dataset">
-                Dataset
-              </p>
-            </div>
-          </div>
           <div class="ivana-anne" id="original">
             <div class="dot" id="original">
 
@@ -418,6 +412,18 @@
               </p>
             </div>
           </div>
+
+          <div class="ivana-anne" id="dataset">
+            <div class="dot" id="dataset">
+
+            </div>
+            <div class="icon-text" id="dataset">
+              <p id="dataset">
+                Dataset
+              </p>
+            </div>
+          </div>
+
           <div class="ivana-anne" id="mask">
             <div class="dot" id="mask">
 
