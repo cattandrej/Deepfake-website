@@ -396,3 +396,18 @@ a:hover {
 .top-navabar-item {
     margin: 1.25vw;
 }
+
+.about-paragraph {
+    margin: 2.5vw 5vw 2.5vw 10vw;
+    max-width: 50vw;
+    font-size: .8em;
+}
+
+.spacing {
+    min-height: 50px;
+    height: 5vw;
+}
+
+.about-title {
+    margin: 2.5vw 5vw 2.5vw 10vw;
+}
