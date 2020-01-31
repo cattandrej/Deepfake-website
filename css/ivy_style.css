@@ -63,25 +63,3 @@ h1 {
 .smaller {
   font-size: .6em;
 }
-
-.logo {
-  margin: 0;
-  height: 80px;
-}
-
-.download{
-  padding: 10vw 0vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.logdown{
-  padding: 0;
-
-}
-
-.down {
-  padding: 0;
-}

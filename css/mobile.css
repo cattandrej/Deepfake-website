@@ -588,3 +588,8 @@ h1 {
 }
 
 }
+
+/* one rem pudding bottom for xs columns*/
+.space-xs-1 {
+    padding-bottom: 1rem;
+  }
