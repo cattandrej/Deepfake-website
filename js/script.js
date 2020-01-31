@@ -64,7 +64,7 @@ var sectionList = [
     new Section(_sections[5], _experiment, _fixed, _visible),
     new Section(_sections[6], _defaul, _resizable, _visible),
     new Section(_sections[7], _defaul, _fixed, _visible),
-    new Section(_sections[8], _defaul, _fixed, _visible),
+    new Section(_sections[8], _defaul, _resizable, _visible),
     new Section(_sections[9], _experiment, _fixed, _visible),
     new Section(_sections[10], _experiment, _fixed, _visible),
     new Section(_sections[11], _defaul, _fixed, _visible),
