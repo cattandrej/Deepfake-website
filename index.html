@@ -101,22 +101,20 @@
           </div>
           <div class="video-text-container">
             <div class="video-title white">
-              Let’s have a look at this example that broke the Internet.
+              Let’s have a look at a popular example from the internet.
 
             </div>
             <div class="video-desc orange">
-              In this video Elon Musk’s face has been translated to a baby. This type of faceswap is
-              the
-              most common use for Deepfake technologies. The edges are not sharp and there is a
-              difference in skin colour.
-
+              In this video Elon Musk’s face has been translated to a baby. This
+              type of faceswap is the most common use of deepfake technologies.
+              The edges are not sharp and there is a difference in skin colour.
             </div>
             <div class="video-imgs">
               <div class="img-container img-small" id="bb">
                 <div class="img-02_Baby img-adapt">
                 </div>
               </div>
-              <div class="img-container img-small" id="El">
+              <div class="img-container img-small" id="Elon">
                 <div class="img-02_Elon img-adapt">
                 </div>
               </div>
@@ -146,8 +144,9 @@
               <div class="icon-desc" id="skin_color">
                 <p>
                   <b>Skin color mismatch:</b><br>
-                  The skin tone is different between mask and target face. The face seems to be
-                  covered by a layer with different colours, showing edges or spots.
+                  A difference in skin tone between the mask and target face.
+                  The face seems to be covered by a layer of different colours,
+                  showing edges or spots.
                 </p>
               </div>
             </div>
@@ -166,10 +165,12 @@
 
         <div class="info-tech-text">
           <p>
-            The deepfake is created by a computer program that trains itself to reproduce a face. By
-            adjusting parameters in its system, the program becomes better in recreating a specific person,
-            this is a type of deep learning. As output, the model creates an overlay for the face, traces of
-            this facial mask can be seen in this video.
+            A deepfake is created by a computer program that trains itself
+            to reproduce a face. By adjusting parameters in its system,
+            the program becomes better in recreating a specific person,
+            this is a type of deep learning. As an output, the model
+            creates an overlay for the face, traces of this facial mask
+            can be seen in this video.
           </p>
         </div>
         <div class="info-additional">
@@ -324,6 +325,13 @@
             You need two videos, a source video, and a target video. The program
             will train itself according to both and create a mask that can be
             placed onto the target video with video editing software.
+            <br> <strong> 1st:</strong>  select a video you want to insert
+            a face into. <strong> 2nd:</strong> record a dataset for the face you want to place that matches the
+            target. <strong> 3rd:</strong>  cover the remaining faces to direct the algorithm.
+          <strong> 4th:</strong>  the algorithm will position and crop the target face.
+            <strong> 5th:</strong>  the algorithm generates a mask that must be aligned with
+            the target video. <strong> 6th:</strong>  edit the video in post to visually
+            embed the mask.</br>
 
           </div>
         </div>
@@ -334,7 +342,19 @@
           <div class="interactive">
             <div class="video-collection" style="height: 25vw;">
 
+
+
               <div class="video-interactive-container" id="ref">
+                <div class="video-player-container video-int">
+                  <div class="video-player" id="original">
+                    <video autoplay loop muted class="scale-1" id="vid-original">
+                      <source src="res/vid/int00/00-original.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+              </div>
+
+              <div class="video-interactive-container  translate-100" id="ref">
                 <div class="video-player-container video-int">
                   <div class="video-player" id="dataset">
                     <video autoplay loop muted class="scale-1" id="vid-dataset">
@@ -344,15 +364,6 @@
                 </div>
               </div>
 
-              <div class="video-interactive-container translate-100" id="ref">
-                <div class="video-player-container video-int">
-                  <div class="video-player" id="original">
-                    <video autoplay loop muted class="scale-1" id="vid-original">
-                      <source src="res/vid/int00/00-original.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                </div>
-              </div>
               <div class="video-interactive-container translate-200">
                 <div class="video-player-container video-int">
                   <div class="video-player" id="mask">
@@ -398,16 +409,7 @@
           </div>
         </div>
         <div class="video-controls">
-          <div class="ivana-anne" id="dataset">
-            <div class="dot" id="dataset">
 
-            </div>
-            <div class="icon-text" id="dataset">
-              <p id="dataset">
-                Dataset
-              </p>
-            </div>
-          </div>
           <div class="ivana-anne" id="original">
             <div class="dot" id="original">
 
@@ -418,6 +420,18 @@
               </p>
             </div>
           </div>
+
+          <div class="ivana-anne" id="dataset">
+            <div class="dot" id="dataset">
+
+            </div>
+            <div class="icon-text" id="dataset">
+              <p id="dataset">
+                Dataset
+              </p>
+            </div>
+          </div>
+
           <div class="ivana-anne" id="mask">
             <div class="dot" id="mask">
 
@@ -1260,7 +1274,7 @@
             the face will be slightly blurred and less detailed. Also,
             pay attention to the audio, there might be flaws or lip-sync
             problems. If a video is likely to be a target, you question
-            if it is real, and, according to what yo \u have learned on this
+            if it is real, and, according to what you have learned on this
             website, the conditions are suitable for a deepfake, always
             check the source.
           </p>
@@ -1290,8 +1304,8 @@
             <br> you acquired on this website so that you can check videos yourself.</br>
           </div>
           <div class="download">
-            <a href="files/Deepfake spotter.pdf">
-              <div class="icondown">
+            <a href="files/Deepfake spotter.pdf" target="_blank">
+              <div>
                 <img class="logdown" src="res/img/logo-download.svg" alt="Download logo">
               </div>
               <div class="video-desc downtext">
