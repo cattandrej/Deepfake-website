@@ -202,6 +202,7 @@ video {
     margin: 0px;
 }
 
+
 .icon-desc-row {
     white-space: normal;
     padding-right: 7.5vw;
@@ -452,3 +453,59 @@ html, body {
 #plus, #minus {
     line-height: 20vw;
 }
+
+/* FOOTER */
+
+/* footer padding */
+footer {
+  padding-top: 1rem;
+}
+
+  /*three rem pudding bottom for xs columns*/
+  .space-sm-3 {
+    padding-bottom: 1rem;
+  }
+
+  /* logo style */
+.logo {
+    margin: 0;
+    height: 50px;
+  }
+
+  .download{
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icondown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2rem;
+  }
+
+  .logdown{
+    padding: 0;
+  }
+  
+  .down {
+    padding: 0;
+  }
+
+  .downtext{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .container2 {
+    margin: 0px;
+    padding: 0px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: 100%;
+    display: inline-block;
+    overflow: hidden;
+  }
