@@ -20,6 +20,7 @@ const _sections = [
     "twelfth"
 ];
 
+
 //
 // CONST VARIABLES
 // 
@@ -266,3 +267,21 @@ function getCurTime() {
   function setCurTime() { 
     vid.currentTime=5;
   }
+
+window.addEventListener("scroll", checkVisibility());
+
+function checkVisibility() {
+    console.log("trololo");
+
+}
+
+var runOnScroll = function(event) {
+    console.log("Scrolling");
+    if ($('.container#third').visible()) {
+        //scroll_to(_sections[8]);
+        console.log("visible");
+    } else {
+    }
+};
+
+window.addEventListener("scroll", runOnScroll);
