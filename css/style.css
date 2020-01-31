@@ -414,13 +414,15 @@ html, body {
 }
 
 .intro, .video-intro {
-    padding: 5vh 0;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
 
+.intro {
+    padding-top: 2.5vh;
 }
 
 .title {
@@ -441,4 +443,8 @@ html, body {
     padding: 0px;
     height: 100%;
     width: 100%;
+}
+
+#plus, #minus {
+    line-height: 20vw;
 }
