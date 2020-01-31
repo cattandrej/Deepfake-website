@@ -439,8 +439,11 @@ html, body {
 
 .subtitle {
     padding: 1.25vw 2.5vw;
-    font-size: 1.75rem;
+    font-size: 5vh;
     color: rgba(255,255,255, 0.5);
+     font-family: 'Playfair Display', serif;
+     font-weight: 700;
+     text-align: left;
 }
 
 .video-int {
