@@ -593,3 +593,22 @@ h1 {
 .space-xs-1 {
     padding-bottom: 1rem;
   }
+
+  
+.title {
+    margin-top: 10vh;
+    padding: 25px;
+    font-size: 10rem !important;
+    line-height: 10rem;    
+    white-space: normal;
+}
+
+.subtitle {
+    padding: 1.25vw 2.5vw;
+    font-size: 5vh;
+    color: rgba(255,255,255, 0.5);
+     font-family: 'Playfair Display', serif;
+     font-weight: 700;
+     text-align: left;
+    white-space: normal;
+}
