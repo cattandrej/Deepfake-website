@@ -373,7 +373,7 @@ window.addEventListener("wheel", event => {
         scrollingValue = 0;
         wasScrolling = false;
 
-    }, 1000);
+    }, 250);
 }, false);
 
 

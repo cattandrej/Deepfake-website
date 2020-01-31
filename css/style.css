@@ -411,4 +411,28 @@ a:hover {
 }
 
 html, body {
-    touch-action: none; }
+    touch-action: none;
+}
+
+.intro, .video-intro {
+    padding: 5vh 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.title {
+    margin-top: 5vh;
+    padding: 25px;
+    font-size: 10rem !important;
+    line-height: 10rem;
+}
+
+.subtitle {
+    padding: 1.25vw 2.5vw;
+    font-size: 1.75rem;
+    color: rgba(255,255,255, 0.5);
+}
