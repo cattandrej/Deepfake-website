@@ -162,7 +162,7 @@ body {
 .button:hover {
 
     height: 22.5vw;
-    background-color: tomato;
+    background-color: #f8b67a;
 }
 
 .number {
@@ -373,7 +373,7 @@ a:hover {
   }
 
   .dot-active {
-      background-color: yellow;
+      background-color: #f0801a;
   }
 
 .top-navbar {
