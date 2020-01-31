@@ -307,7 +307,6 @@ a:hover {
 
 .interactive {
     height: auto;
-    max-height: 50vh;
     padding: 50 0 50 0;
 }
 
@@ -344,7 +343,7 @@ a:hover {
 }
 
 .ivana-anne {
-    margin: 0 2.5vw 2.5vw 2.5vw;
+    margin: 0 1.25vw;
     height: 100%;
     width: 5vw;
     display: flex;
@@ -435,4 +434,11 @@ html, body {
     padding: 1.25vw 2.5vw;
     font-size: 1.75rem;
     color: rgba(255,255,255, 0.5);
+}
+
+.video-int {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
 }

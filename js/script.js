@@ -1,7 +1,7 @@
 console.log("HELLO");
 updateAutoMargin();
 
-$(".video-collection").css("height", $(".video-interactive-container").css("height"));
+//$(".video-collection").css("height", $(".interactive").css("height"));
 
 var vid = document.getElementById("vid-post");
 
@@ -233,7 +233,7 @@ $('.ivana-anne').mouseenter(function (event) {
 });
 
 function updateAutoMargin() {
-    $(".video-collection").css("height", $(".video-interactive-container").css("height"));
+    //$(".video-collection").css("height", $(".interactive").css("height"));
 
     var margin = (window.innerHeight - (($(window).width() * 9) / 16)) / 2;
     console.log("H = " + window.innerHeight + "; W = " + $(window).width());
